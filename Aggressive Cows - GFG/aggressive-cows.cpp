@@ -27,7 +27,7 @@ bool isSafe(int mid,vector<int>&stalls,int n,int k){
     int solve(int n, int k, vector<int> &stalls) {
     
         // Write your code here
-        if(k>n) return -1;
+       
         sort(stalls.begin(),stalls.end());
         int low=0;
         int high=*max_element(stalls.begin(),stalls.end())- *min_element(stalls.begin(),stalls.end());
