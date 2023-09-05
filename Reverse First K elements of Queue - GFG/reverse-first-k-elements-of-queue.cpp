@@ -46,9 +46,10 @@ queue<int> modifyQueue(queue<int> q, int k) {
     int t=q.size()-k;
     
     while(t--){
-        int val=q.front();
+       // int val=q.front();
+      //q.pop();
+        q.push(q.front());
         q.pop();
-        q.push(val);
     }
     
     return q;
