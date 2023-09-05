@@ -7,19 +7,29 @@ class Solution {
 	public:
 		string FirstNonRepeating(string A){
 		    // Code here
-		    unordered_map<char,int>mpp;
-		    string ans="";
+		    unordered_map<char,int>count;
 		    queue<char>q;
+		    string ans="";
 		    
 		    for(int i=0;i<A.length();i++){
-		        mpp[A[i]]++;
-		        if(mpp[A[i]]==1) q.push(A[i]);
+		        char ch=A[i];
+		        count[ch]++;
+		        q.push(ch);
 		        
-		        while(q.size()!=0 && mpp[q.front()]>1) q.pop();
+		        while(!q.empty()){
+		            if(count[q.front()]>1)
+		            q.pop();
+		            
+		            else{
+		                ans.push_back(q.front());
+		                break;
+		            }
+		        }
 		        
-		        if(q.size()==0) ans+="#";
-		        else ans+=q.front();
+		        if(q.empty())
+		        ans.push_back('#');
 		    }
+		    
 		    return ans;
 		}
 
