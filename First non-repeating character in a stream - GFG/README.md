@@ -1,16 +1,16 @@
 # First non-repeating character in a stream
 ## Medium
-<div class="problems_problem_content__Xm_eO"><p><span style="font-size: 18px;">Given an input stream <strong>A </strong>of <strong>n</strong> characters consisting only of lower case alphabets. While reading characters from the stream, you have to tell which character has appeared only once in the stream upto that point. If there are many characters that have appeared only once, you have to tell which one of them was the first one to appear. If there is no such character then append '#' to the answer.</span><br>&nbsp;</p>
+<div class="problems_problem_content__Xm_eO"><p><span style="font-size: 18px;">Given an input stream <strong>A </strong>of <strong>n</strong> characters consisting only of lower case alphabets. While reading characters from the stream, you have to tell which character has appeared only once in the stream upto that point. If there are many characters that have appeared only once, you have to tell which one of them was the first one to appear. If there is no such character then append '#' to the answer.</span></p>
+<p><strong>NOTE:<br></strong>1. You need to find the answer for every i (0 &lt;= i &lt; n)<br>2. In order to find the solution for every i you need to consider the string from starting position till ith position.<strong><br></strong>&nbsp;</p>
 <p><span style="font-size: 18px;"><strong>Example 1:</strong></span></p>
 <pre><span style="font-size: 18px;"><strong>Input: </strong>A = "aabc"
 <strong>Output: </strong>"a#bb"
-<strong>Explanation: </strong>For every character first non
+<strong>Explanation: </strong>For every ith character we will<br>consider the string from index 0 till index i first non
 repeating character is as follow-
 "a" - first non-repeating character is 'a'
 "aa" - no non-repeating character so '#'
 "aab" - first non-repeating character is 'b'
-"aabc" - first non-repeating character is 'b'</span>
-</pre>
+"aabc" - there are two non repeating characters 'b' and 'c', <br></span><span style="font-size: 18px;">first non-repeating character is 'b' because 'b' comes before<br>'c' in the stream.</span></pre>
 <p><span style="font-size: 18px;"><strong>Example 2:</strong></span></p>
 <pre><span style="font-size: 18px;"><strong>Input: </strong>A = "zz"
 <strong>Output: </strong>"z#"
